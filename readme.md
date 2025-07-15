@@ -14,7 +14,7 @@ You will need to manage the following:
 
 1. Creating, reading and updating Customer information.
 
-   - At a minimum this should include first name and last name. Feel free to add other information you think is relevent.
+   - At a minimum this should include first name and last name. Feel free to add other information you think is relevant.
    - Reading the Customer record should return an estimated and actual payment due based on their orders.
 
 2. Creating, reading and updating Customer Orders.
