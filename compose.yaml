@@ -1,0 +1,7 @@
+﻿services:
+  petshop:
+    image: petshop
+    build:
+      context: .
+      dockerfile: PetShop.API/Dockerfile
+
