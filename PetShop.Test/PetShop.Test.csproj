@@ -18,6 +18,8 @@
 
     <ItemGroup>
         <ProjectReference Include="..\PetShop.API\PetShop.API.csproj" />
+        <ProjectReference Include="..\PetShop.Application\PetShop.Application.csproj" />
+        <ProjectReference Include="..\PetShop.Domain\PetShop.Domain.csproj" />
     </ItemGroup>
 
 </Project>

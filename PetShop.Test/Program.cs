@@ -1,3 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-Console.WriteLine("Hello, World!");
+﻿// This file is intentionally empty for the test project
