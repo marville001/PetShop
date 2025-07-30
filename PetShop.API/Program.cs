@@ -21,8 +21,6 @@ builder.Services.AddApplicationServices();
 // Infrastructure layer services (e.g., repositories)
 builder.Services.AddInfrastructureServices();
 
-builder.Services.AddAutoMapper(typeof(CustomerMappingProfile));
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

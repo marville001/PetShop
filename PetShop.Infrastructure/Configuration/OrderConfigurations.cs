@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PetShop.Domain.Entities;
+using PetShop.Domain.Enums;
 
 namespace PetShop.Infrastructure.Configuration;
 
@@ -13,7 +14,10 @@ public class OrderConfigurations:IEntityTypeConfiguration<Order>
         builder.Property(o => o.PickupDate).IsRequired();
         
         builder.Property(r => r.Status)
-            .HasConversion<string>();
+            .HasConversion<string>(
+                v=> v.ToString(),
+                v => (OrderStatus)Enum.Parse(typeof(OrderStatus), v)
+            );
 
         builder.HasOne(e => e.Customer)
             .WithMany(c => c.Orders)

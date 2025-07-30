@@ -5,7 +5,6 @@ namespace PetShop.Domain.Entities;
 public class Pet
 {
     public int Id { get; set; }
-    public int OrderId { get; set; }
     public string? Name { get; set; }
     public decimal Price { get; set; }
     public PetKind Kind { get; set; }
@@ -14,5 +13,5 @@ public class Pet
     public int AgeInMonths { get; set; }
     public string Description { get; set; } = string.Empty;
         
-    public virtual Order Order { get; set; } = null!;
+    public virtual ICollection<OrderPet> OrderPets { get; set; } = new List<OrderPet>();
 }

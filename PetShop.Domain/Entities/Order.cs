@@ -13,5 +13,5 @@ public class Order
     public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
         
     public virtual Customer Customer { get; set; } = null!;
-    public virtual ICollection<Pet> Pets { get; set; } = new List<Pet>();
+    public virtual ICollection<OrderPet> OrderPets { get; set; } = new List<OrderPet>();
 }

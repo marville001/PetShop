@@ -42,7 +42,6 @@ public class CustomerRepository: ICustomerRepository
     {
         return  await _context.Customers
             .Include(c => c.Orders)
-            .ThenInclude(o => o.Pets)
             .FirstOrDefaultAsync(c=>c.Id == id);
     }
 

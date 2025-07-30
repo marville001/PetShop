@@ -11,7 +11,9 @@ public static class InfrastructureRegistrationServices
 	{
 		// Register your services here
 		services.AddScoped<ICustomerRepository, CustomerRepository>();
-		
+		services.AddScoped<IOrderRepository, OrderRepository>();
+		services.AddScoped<IPetRepository, PetRepository>();
+
 		return services;
 	}
 }
